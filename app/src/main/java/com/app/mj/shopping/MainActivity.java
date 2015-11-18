@@ -20,7 +20,6 @@ import com.app.mj.shopping.fragment.MineFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-//import android.support.v4.app.FragmentTabHost;
 
 
 public class MainActivity extends FragmentActivity {

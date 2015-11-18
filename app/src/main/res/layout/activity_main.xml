@@ -30,20 +30,6 @@
     </com.app.mj.shopping.Widget.FragmentTabHost>
 
 
-    <!--<android.support.v4.app.FragmentTabHost-->
-        <!--android:id="@android:id/tabhost"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="@color/white">-->
-
-        <!--<!-必须写但是没有用，实际使用FramLayout中的realtabcontent"-->-->
-        <!--<FrameLayout-->
-            <!--android:id="@android:id/tabcontent"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="0dp"-->
-            <!--android:layout_weight="0" />-->
-
-    <!--</android.support.v4.app.FragmentTabHost>-->
 
 
 </LinearLayout>
