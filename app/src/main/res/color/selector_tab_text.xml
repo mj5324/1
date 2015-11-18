@@ -4,4 +4,5 @@
     <item android:state_active="true" android:color="#eb4f38"/>
     <item android:state_selected="false" android:color="#a9b7b7" />
     <item android:state_active="false" android:color="#a9b7b7"/>
+
 </selector>
