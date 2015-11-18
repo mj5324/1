@@ -111,6 +111,7 @@ public class HomeFragment extends Fragment {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
     }
 
+//添加一行
 
 //    //初始化RecyclerView,这个是写死的，读取本地
 //    private void initRecyclerView(View view) {
