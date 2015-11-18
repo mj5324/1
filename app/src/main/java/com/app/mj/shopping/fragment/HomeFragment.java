@@ -24,7 +24,6 @@ import com.app.mj.shopping.http.SpotsCallBack;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
-import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.google.gson.Gson;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -221,25 +220,25 @@ public class HomeFragment extends Fragment {
         }
 
 
-
-        //添加监听事件
-        mSliderLayout.addOnPageChangeListener(new ViewPagerEx.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int i, float v, int i2) {
-//                Log.e("onPageScrolled","页面滑动");
-            }
-
-            @Override
-            public void onPageSelected(int i) {
-//                Toast.makeText(getContext(), "onPageSelected"+"第几张图片"+i, Toast.LENGTH_LONG).show();
-                Log.e("onPageSelected","选中"+i);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int i) {
-//                Log.e("onPageScrollStateChanged","状态改变");
-            }
-        });
+//
+//        //添加监听事件
+//        mSliderLayout.addOnPageChangeListener(new ViewPagerEx.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int i, float v, int i2) {
+////                Log.e("onPageScrolled","页面滑动");
+//            }
+//
+//            @Override
+//            public void onPageSelected(int i) {
+////                Toast.makeText(getContext(), "onPageSelected"+"第几张图片"+i, Toast.LENGTH_LONG).show();
+//                Log.e("onPageSelected","选中"+i);
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int i) {
+////                Log.e("onPageScrollStateChanged","状态改变");
+//            }
+//        });
     }
 
 
