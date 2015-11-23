@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.app.mj.shopping.Contants;
 import com.app.mj.shopping.R;
-import com.app.mj.shopping.adapter.HotWaresAdapter;
+import com.app.mj.shopping.adapter.HWAdatper;
 import com.app.mj.shopping.bean.Page;
 import com.app.mj.shopping.bean.Wares;
 import com.app.mj.shopping.http.OkHttpHelper;
@@ -24,9 +24,7 @@ import com.squareup.okhttp.Response;
 import java.util.List;
 
 
-/**
- * Created by Ivan on 15/9/22.
- */
+
 public class HotFragment extends Fragment{
 
     private RecyclerView mRecyclerView;
@@ -37,7 +35,8 @@ public class HotFragment extends Fragment{
 
     private List<Wares> datas;
 
-    private HotWaresAdapter mAdatper;
+//    private HotWaresAdapter mAdatper;
+    private HWAdatper mAdatper;   //使用封装后的Adapter
 
 
     private int currPage=1;
@@ -113,7 +112,8 @@ public class HotFragment extends Fragment{
 
         switch (state){
             case  STATE_NORMAL:
-                mAdatper =  new HotWaresAdapter(datas);
+//                mAdatper =  new HotWaresAdapter(datas);
+                mAdatper = new HWAdatper(getContext(),datas);
 
                 mRecyclerView.setAdapter(mAdatper);
                 mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
