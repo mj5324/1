@@ -62,6 +62,8 @@ public class HomeFragment extends Fragment {
         return  view;
     }
 
+
+
     //    从网络获取并初始化页面数据，完成RecyclerView的初始化
     private void requestRecyclerView(View view) {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);

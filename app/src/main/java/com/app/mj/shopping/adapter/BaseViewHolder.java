@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class BaseViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
-    private SparseArray<View> views;
+    private SparseArray<View> views;  //保存（ID,View对象）
 
     private BaseAdapter.OnItemClickListener mOnItemClickListener ;
 
@@ -40,6 +40,7 @@ public class BaseViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     }
 
 
+    //通过id,返回相应的View
     protected <T extends View> T retrieveView(int viewId) {
         View view = views.get(viewId);
         if (view == null) {

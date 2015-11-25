@@ -5,14 +5,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import java.util.ArrayList;
+
 import java.util.List;
 
 
 public abstract class BaseAdapter<T,H extends  BaseViewHolder> extends RecyclerView.Adapter<BaseViewHolder>{
 
 
-    protected static final String TAG = BaseAdapter.class.getSimpleName();
 
     protected final Context context;
 
@@ -25,9 +24,7 @@ public abstract class BaseAdapter<T,H extends  BaseViewHolder> extends RecyclerV
 
 
 
-    public  interface OnItemClickListener {
-        void onItemClick(View view, int position);
-    }
+
 
 
 
@@ -35,9 +32,9 @@ public abstract class BaseAdapter<T,H extends  BaseViewHolder> extends RecyclerV
         this(context, layoutResId, null);
     }
 
-
     public BaseAdapter(Context context, int layoutResId, List<T> datas) {
-        this.datas = datas == null ? new ArrayList<T>() : datas;
+        this.datas = datas;
+//        this.datas = datas == null ? new ArrayList<T>() : datas;
         this.context = context;
         this.layoutResId = layoutResId;
     }
@@ -70,7 +67,9 @@ public abstract class BaseAdapter<T,H extends  BaseViewHolder> extends RecyclerV
 
 
     public T getItem(int position) {
-        if (position >= datas.size()) return null;
+        if (position >= datas.size()) {
+            return null;
+        }
         return datas.get(position);
     }
 
@@ -85,6 +84,9 @@ public abstract class BaseAdapter<T,H extends  BaseViewHolder> extends RecyclerV
 
         return  datas;
     }
+
+
+
     public void addData(List<T> datas){
 
         addData(0,datas);
@@ -100,15 +102,14 @@ public abstract class BaseAdapter<T,H extends  BaseViewHolder> extends RecyclerV
 
 
 
-
-    /**
-     * Implement this method and use the helper to adapt the view to the given item.
-     * @param viewHoder A fully initialized helper.
-     * @param item   The item that needs to be displayed.
-     */
+//抽象方法，绑定数据
     protected abstract void convert(H viewHoder, T item);
 
 
+
+    public  interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
 
 
     public void setOnItemClickListener(OnItemClickListener listener) {
